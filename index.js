@@ -32,6 +32,11 @@ app.get('/', (req, res) => {
     res.render('home', { title })
 })
 
+app.get('/newTodo', (req, res) => {
+    const title = "New Todo"
+    res.render('newTodo', { title })
+})
+
 //404 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404))
